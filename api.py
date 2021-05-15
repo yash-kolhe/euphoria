@@ -52,7 +52,10 @@ dtree = dtree.fit(train_featurestree, [int(r) for r in y])
 def datreeINPUT(inputtweet):
     inputdtree= vectorizer.transform([inputtweet])
     predictt = dtree.predict(inputdtree)
-    return predictt
+    if(predictt == 0 or predictt == -1):
+        return predictt
+    else:
+        return (predictt-1)
 
 @app.route('/')
 def home():
