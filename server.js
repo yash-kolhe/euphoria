@@ -4,9 +4,11 @@ const express = require("express");
 const socketio = require("socket.io");
 const formatMessage = require("./utils/messages");
 const mongoose = require("mongoose");
+const creds = require("./utils/creds")
+const auth = creds()
 mongoose
   .connect(
-    "mongodb+srv://SkyFox2103:infinity10@euphoria0.puvyh.mongodb.net/euphoria0?retryWrites=true&w=majority",
+    auth,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
