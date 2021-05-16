@@ -6,7 +6,7 @@ const formatMessage = require("./utils/messages");
 const mongoose = require("mongoose");
 mongoose
   .connect(
-    "mongodb+srv://<username>:<password>@<dbname>.puvyh.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "mongodb+srv://SkyFox2103:infinity10@euphoria0.puvyh.mongodb.net/euphoria0?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -56,7 +56,7 @@ io.on("connection", (socket) => {
       .catch((err) => console.log(err));
 
     // Welcome current user
-    socket.emit("message", formatMessage(botName, "Welcome to ChatCord!"));
+    socket.emit("message", formatMessage(botName, "Welcome to Euphoria!"));
 
     // Broadcast when a user connects
     socket.broadcast
@@ -105,7 +105,7 @@ io.on("connection", (socket) => {
                     "message",
                     formatMessage(
                       botName,
-                      "iCall is an email and telephone-based counselling service run by Tata Institute of Social Sciences \n and they offer free services with the help of a team of qualified and trained mental health professionals.\nThey are available Monday to Saturday between 8 am and 10 pm \n Helpline Number: +91 22 2552111 and +91 91529 87821"
+                      "This message can only be seen by you)\nHey There!\n You are emanating an aura we're not sure is very healthy for you and your mental health :( \n Please take better care of yourself, love yourself, be kinder to yourself,\n and see the magic happen ! We wish you best of luck and lots of love !\nDon't worry, there's always light at the end of the dark tunnel, and if you need a hand in finding that light, you can reach out to these guys over at iCall.\niCall is an email and telephone-based counselling service run by Tata Institute of Social Sciences \n and they offer free services with the help of a team of qualified and trained mental health professionals.\nThey are available Monday to Saturday between 8 am and 10 pm \n Helpline Number: +91 22 2552111 and +91 91529 87821"
                     )
                   );
                 }
